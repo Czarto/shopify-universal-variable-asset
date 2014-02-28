@@ -99,7 +99,7 @@
         // TOOD: loop through the tags[] array and add them as key value pairs on a deeper level 
         // e.g. subsubcategory, subsubsubcategory
         subcategory: product.tags[0], 
-        currency: "GBP",
+        currency: "{{ shop.currency }}",
         unit_price: product.price / 100,
         unit_sale_price: product.price_min / 100,
 
@@ -199,8 +199,7 @@
     uv.basket =  {
       id: basket.token,
 
-      // TODO
-      // currency: GBP,
+      currency: "{{ shop.currency }}",
 
       subtotal: basket.total_price,
 
